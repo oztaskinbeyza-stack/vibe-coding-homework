@@ -1,0 +1,25 @@
+Tabii, EXPERIENCE.md dosyan için kopyalayıp direkt yapıştırabileceğin İngilizce metin aşağıdadır. Bu metin, gönderdiğin son PDF'teki (son düzen ing format.pdf) deneyimlerini ödevin istediği başlıklar altında toplar:
+
+EXPERIENCE.md: Vibe Coding Experience Report
+Tool Selection
+For this project, I chose Python and the Vibe coding tools because they offer a powerful, flexible, and free solution for developing desktop applications. In games like Tetris, which require intensive user interaction, the use of a cursor plays a critical role; it visually indicates which block the player is interacting with and makes it easier to manage mechanics such as block movement and collision detection. Using a cursor with Python's Pygame library allowed me to track the game grid accurately and control the movement of blocks without errors. Thanks to Vibe's context-aware code suggestions, cursor-based control structures could be implemented quickly and accurately, making the code more modular and readable.
+
+
+
+
+Development Process
+During development, I used Vibe alongside Python and Pygame to create a desktop Tetris game by providing a comprehensive prompt. My instructions included creating a 10x20 grid, identifying all 7 Tetrominoes with different colors, and setting up specific player controls like arrow keys for movement and rotation. I also specified core mechanics like line clearing, scoring (100 points per line with multipliers), and level progression. The most effective prompts were those instructing the cursor to track the active block and manage the line-clearing mechanics. It took a total of five iterations to get the project fully functional. While the game was playable from the initial iterations, subsequent steps focused on improving the user interface, such as adjusting score displays and next-piece previews.
+
+
+
+
+
+Challenges and Solutions
+The main challenges during development were the row-clearing mechanics and the proper placement of UI elements. During row clearing, index shifts sometimes caused incorrect rows to be removed, leading to misplaced blocks. Additionally, the score panel, level indicator, and next piece preview were initially overlapping. The AI tool was extremely helpful in ensuring that the row-clearing algorithm worked correctly and that the cursor tracked blocks accurately. Correct row deletion, block shifting, and score updates were implemented flawlessly with AI assistance. However, visual details such as UI design, font sizes, and panel placement required manual adjustments, as the AI could not provide sufficient guidance in these specific aesthetic areas.
+
+
+
+
+
+Reflection
+I was most impressed by Vibe coding's context-aware suggestions, which accurately broke down complex algorithms and game logic, particularly the cursor-based movements. This technology accelerated the coding process and reduced errors, allowing me to spend more time on UI design and enhancing the user experience. I would definitely use this tool in future projects due to its time-saving capabilities and accuracy in handling modular code. I believe AI tools will significantly increase developer productivity by automating repetitive tasks and helping beginners accelerate their learning process.
