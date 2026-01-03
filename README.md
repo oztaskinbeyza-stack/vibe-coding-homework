@@ -3,16 +3,16 @@
 A fully functional Tetris game implemented in Python using the Pygame library. This project explores the "Vibe Coding" paradigm by using AI-powered development tools for logic and UI structure.
 
 ## 🚀 Project Features
-* [cite_start]**Grid Layout**: Standard 10x20 game grid[cite: 972].
-* [cite_start]**Classic Pieces**: Includes all 7 Tetrominoes (I, O, T, S, Z, J, L) with distinct colors[cite: 972].
-* [cite_start]**Scoring & Levels**: 100 points per line with multipliers for multiple lines (3x, 5x, 8x)[cite: 972].
-* [cite_start]**Progression**: Difficulty levels increase every 10 lines cleared[cite: 972].
-* [cite_start]**Enhanced UI**: Includes real-time score, level tracker, lines cleared counter, and a "Next Piece" preview [cite: 972-973].
+* **Grid Layout**: Standard 10x20 game grid.
+* **Classic Pieces**: Includes all 7 Tetrominoes (I, O, T, S, Z, J, L) with distinct colors.
+* **Scoring & Levels**: 100 points per line with multipliers for multiple lines (3x, 5x, 8x).
+* **Progression**: Difficulty levels increase every 10 lines cleared.
+* **Enhanced UI**: Includes real-time score, level tracker, lines cleared counter, and a "Next Piece" preview.
 
 ## 🛠️ Technologies Used
 * **Python**: Core programming language.
 * **Pygame**: Library used for graphics and input handling.
-* [cite_start]**Cursor**: AI-first code editor used for development [cite: 663-664].
+* **Cursor**: AI-first code editor used for development.
 
 ## 🕹️ Controls
 * **Left/Right Arrows**: Move piece horizontally.
@@ -21,6 +21,52 @@ A fully functional Tetris game implemented in Python using the Pygame library. T
 * **P Key**: Pause / Unpause the game.
 * **R Key**: Restart game after Game Over.
 
-## ⚙️ How to Run
-1. Install Pygame: `pip install pygame`
-2. Run the script: `python tetris.py`
+---
+
+# 🐳 Tetris (Pygame) — Dockerization (Homework Section)
+
+This section provides instructions on how to build and run the Tetris game within a Docker container, as required for the dockerization assignment.
+
+## ⚙️ Quick Start
+
+### 1. Build the Image
+Open your terminal in the project directory and run:
+```bash
+docker build -t tetris-pygame .
+(This command uses the provided Dockerfile to install dependencies and package the app.)
+
+2. Run the Container (GUI Support)
+Windows (WSLg) — Simplest on Windows:
+
+Bash
+
+docker run --rm -it -e DISPLAY=$DISPLAY tetris-pygame
+Linux (X11):
+
+Bash
+
+xhost +local:docker
+docker run --rm -it \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  tetris-pygame
+xhost -local:docker
+🛠️ Technical Details (What the Dockerfile does)
+Base Image: Uses python:3.11-slim to minimize image size.
+
+SDL2 Dependencies: Installs libsdl2, libgl1, and other runtime libraries required for Pygame graphics/audio.
+
+Non-root User: Runs the game as appuser instead of root for better security practices.
+
+Optimization: Includes a .dockerignore file to exclude unnecessary files like __pycache__ and venv from the build.
+
+Dependency Management: Uses requirements.txt to pin the pygame version to 2.5.2.
+
+✅ Submission Checklist
+[x] Dockerfile properly configured.
+
+[x] requirements.txt with dependencies.
+
+[x] .dockerignore to keep image clean.
+
+[x] README.md updated with Docker run instructions.
